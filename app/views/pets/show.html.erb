@@ -1,6 +1,13 @@
 <h1>Pet Detail Page</h1>
 
-<div>Name: <%= @pet.name %></div>
-<div>Good With Kids? <%= @pet.good_with_kids %></div>
+<div>Name: <%= @pet.name + " the " + @pet.species %></div>
+<div>Age: <%= (Time.now.year - @pet.year_of_birth).to_s + " year(s) old"%>
 
+<div><%= if @pet.good_with_kids
+            "Good with children"
+         else
+            "Prefers a home without children" 
+         end   %>
+<div> 
+<%= link_to :index, pets_path%></div>
 <%= button_to "Toggle Good With Kids", toggle_path(@pet.id) %>

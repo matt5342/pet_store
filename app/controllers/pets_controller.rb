@@ -28,6 +28,18 @@ class PetsController < ApplicationController
     def new
         render :new_pet_form
     end
+    def dogs
+        # @pets = Pet.all 
+        @dogs = Pet.all.select {|pet| pet.species == "dog"}
+    end
+
+    def cats
+        @cats = Pet.all.select {|pet| pet.species == "cat"}
+    end
+    def type
+        @birds =Pet.find(params[:species])
+
+    end
 
     def toggle_good_with_kids
         pet = Pet.find(params[:id])

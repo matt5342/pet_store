@@ -19,7 +19,7 @@ You're creating an app from scratch, so fork and clone this README, and start wi
   - should list the pet's age (not the birth year!  Figure out the age without hardcoding the current year)
   - Either "Good with children" or "Prefers a home without children" 
   - detail page should link back to index page
-  
+
  - Create pages at `/dogs`, `/cats` and `/birds` listing the respective animals.  (Hint:  Do you really need another view here, or can you use something you've already built?)
  
  **Bonus**

@@ -1,0 +1,7 @@
+<h1>Pets Index View</h1>
+
+<ul>
+    <% @dogs.each do |dog| %>
+        <li><%= link_to dog.name, pet_path(@dogs)%></li>
+    <% end %>
+</ul>
